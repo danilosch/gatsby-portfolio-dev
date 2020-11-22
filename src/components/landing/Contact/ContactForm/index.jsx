@@ -16,12 +16,12 @@ export default () => (
       success: false,
     }}
     validationSchema={Yup.object().shape({
-      name: Yup.string().required('Full name field is required'),
+      name: Yup.string().required('Preenchimento obrigatório'),
       email: Yup.string()
-        .email('Invalid email')
-        .required('Email field is required'),
-      message: Yup.string().required('Message field is required'),
-      recaptcha: Yup.string().required('Robots are not welcome yet!'),
+        .email('E-mail inválido')
+        .required('Preenchimento obrigatório'),
+      message: Yup.string().required('Preenchimento obrigatório'),
+      recaptcha: Yup.string().required('Robôs não são bem-vindos!'),
     })}
     onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
       try {
@@ -43,7 +43,7 @@ export default () => (
       } catch (err) {
         setSubmitting(false);
         setFieldValue('success', false);
-				alert('Something went wrong, please try again!') // eslint-disable-line
+				alert('Ocorreu algo inesperado, por favor tente novamente!') // eslint-disable-line
       }
     }}
   >
@@ -56,7 +56,7 @@ export default () => (
             name="name"
             component="input"
             aria-label="name"
-            placeholder="Full name*"
+            placeholder="Nome completo*"
             error={touched.name && errors.name}
           />
           <ErrorMessage component={Error} name="name" />
@@ -69,7 +69,7 @@ export default () => (
             as={FastField}
             type="email"
             name="email"
-            placeholder="Email*"
+            placeholder="E-mail*"
             error={touched.email && errors.email}
           />
           <ErrorMessage component={Error} name="email" />
@@ -83,7 +83,7 @@ export default () => (
             rows="8"
             type="text"
             name="message"
-            placeholder="Message*"
+            placeholder="Sua mensagem*"
             error={touched.message && errors.message}
           />
           <ErrorMessage component={Error} name="message" />
@@ -102,13 +102,13 @@ export default () => (
         {values.success && (
           <InputField>
             <Center>
-              <h4>Your message has been successfully sent, I will get back to you ASAP!</h4>
+              <h4>Sua mensagem foi enviada com sucesso, darei um retorno o mais breve possível!</h4>
             </Center>
           </InputField>
         )}
         <Center>
           <Button secondary type="submit" disabled={isSubmitting}>
-            Submit
+            Enviar
           </Button>
         </Center>
       </Form>

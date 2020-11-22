@@ -15,13 +15,17 @@ export const Skills = () => {
           <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
         </Thumbnail>
         <Details theme={theme}>
-          <h1>More about me</h1>
+          <h1>Sobre mim</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry’s standard dummy.
+            Bacharel em Sistemas de Informação e apaixonado por tecnologia, há mais de cinco anos atuando com
+            Desenvolvimento Web.
+            <br />
+            <br />
+            Especialista nas linguagens de programação JavaScript e PHP, bancos de dados MySQL, PostgreSQL e MongoDB e
+            tecnologias como ReactJS, NodeJS e Laravel.
           </p>
           <Button as={AnchorLink} href="#contact">
-            Hire me
+            Contacte-me
           </Button>
         </Details>
       </SkillsWrapper>

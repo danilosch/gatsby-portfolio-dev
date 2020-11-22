@@ -32,7 +32,7 @@ export const Projects = () => {
                   forkCount
                   languages(first: 3) {
                     nodes {
-                      id,
+                      id
                       name
                     }
                   }
@@ -46,7 +46,7 @@ export const Projects = () => {
   );
   return (
     <Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
+      <h2>Projetos</h2>
       <Grid>
         {edges.map(({ node }) => (
           <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
@@ -58,23 +58,19 @@ export const Projects = () => {
               <TitleWrap>
                 <Stats theme={theme}>
                   <div>
-                    <Star color={theme === "light" ? "#000" : "#fff"} />
+                    <Star color={theme === 'light' ? '#000' : '#fff'} />
                     <span>{node.stargazers.totalCount}</span>
                   </div>
                   <div>
-                    <Fork color={theme === "light" ? "#000" : "#fff"} />
+                    <Fork color={theme === 'light' ? '#000' : '#fff'} />
                     <span>{node.forkCount}</span>
                   </div>
                 </Stats>
                 <Stats theme={theme}>
                   <Languages>
-                    {
-                      node.languages.nodes.map(({ id, name }) => (
-                        <span key={id}>
-                          {name}
-                        </span>
-                      ))
-                    }
+                    {node.languages.nodes.map(({ id, name }) => (
+                      <span key={id}>{name}</span>
+                    ))}
                   </Languages>
                 </Stats>
               </TitleWrap>
