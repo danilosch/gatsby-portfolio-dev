@@ -9,12 +9,12 @@
     "id": 2,
     "name": "Github",
     "link": "https://github.com/danilosch",
-    "icon": "/icons/github.svg"
+    "icon": "/icons/github.png"
   },
   {
     "id": 3,
     "name": "StackOverflow",
     "link": "https://stackoverflow.com/users/7302968/danilo-sch",
-    "icon": "/icons/stackoverflow.svg"
+    "icon": "/icons/stackoverflow.png"
   }
 ]

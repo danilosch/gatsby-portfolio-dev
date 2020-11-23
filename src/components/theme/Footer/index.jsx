@@ -9,15 +9,14 @@ export const Footer = () => (
       <Details>
         <h2>Danilo Schervinski</h2>
         <span>
-          © Todos os direitos reservados | {new Date().getFullYear()}
-          {/* | Made with{' '}
+          © All rights are reserved | {new Date().getFullYear()} | Made with{' '}
           <span aria-label="love" role="img">
             💖
           </span>{' '}
           by{' '}
           <a href="https://smakosh.com/?ref=portfolio-dev" rel="noopener noreferrer" target="_blank">
             Smakosh
-          </a> */}
+          </a>
         </span>
       </Details>
       <Links>
